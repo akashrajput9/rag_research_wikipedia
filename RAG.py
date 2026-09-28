@@ -1,11 +1,11 @@
-#  pa-NBbmyhielEIxcG-th92ZUPL3hqDM_Aa7yEELF4UEv-y
-
+import os
 
 import voyageai
+from dotenv import load_dotenv
 
-vo = voyageai.Client("pa-NBbmyhielEIxcG-th92ZUPL3hqDM_Aa7yEELF4UEv-y")
-# This will automatically use the environment variable VOYAGE_API_KEY.
-# Alternatively, you can use vo = voyageai.Client(api_key="<your secret key>")
+load_dotenv()
+
+vo = voyageai.Client(api_key=os.environ["VOYAGE_API_KEY"])
 
 result = vo.embed(["hello world"], model="voyage-4-large")
 

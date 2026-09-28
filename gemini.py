@@ -1,11 +1,12 @@
+import os
 from time import sleep
 
+from dotenv import load_dotenv
 from google import genai
 
+load_dotenv()
 
-
-google_api_key = "AQ.Ab8RN6Lx-dd2skM8Y0yyg-uiEtV-QSmBkZQuCkRgj1blrm3Cmg"
-#
+google_api_key = os.environ["GOOGLE_STUDIO_API"]
 
 
 client = genai.Client(api_key=google_api_key)
