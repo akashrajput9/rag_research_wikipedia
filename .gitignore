@@ -1,5 +1,6 @@
-.env
 .venv
 venv
 .idea
 __pycache__
+config.bat
+node_modules
